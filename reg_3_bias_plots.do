@@ -49,11 +49,11 @@ coefplot (reg_cov_male ,keep(dr_varenicline) ms(S) mc(gs5) ciopts(lc(gs5)) offse
 		 (reg_rx_year_5,keep(dr_varenicline) ms(S) mc(gs5) ciopts(lc(gs5)) offset(0.05) rename(dr_varenicline="Prescribed in 2010")) (iv_rx_year_5,keep(dr_varenicline) ms(T) mc(gs10) ciopts(lc(gs10)) offset(-0.05)  rename(dr_varenicline = "Prescribed in 2010")) /// 
 		 (reg_rx_year_6,keep(dr_varenicline) ms(S) mc(gs5) ciopts(lc(gs5)) offset(0.05) rename(dr_varenicline="Prescribed in 2011")) (iv_rx_year_6,keep(dr_varenicline) ms(T) mc(gs10) ciopts(lc(gs10)) offset(-0.05)  rename(dr_varenicline = "Prescribed in 2011")) /// 
 		 (reg_rx_year_7,keep(dr_varenicline) ms(S) mc(gs5) ciopts(lc(gs5)) offset(0.05) rename(dr_varenicline="Prescribed in 2012")) (iv_rx_year_7,keep(dr_varenicline) ms(T) mc(gs10) ciopts(lc(gs10)) offset(-0.05)  rename(dr_varenicline = "Prescribed in 2012")) /// 
-		  , legend(off) xline(0) byopts(yrescale)  xtitle("Difference in absolute risk of outcome") graphregion(color(white))
+		  , legend(off) xline(0) byopts(yrescale)  xtitle("Scaled bias components") graphregion(color(white))
 
 coefplot (reg_cov_num_cons_12mth ,keep(dr_varenicline) ms(S) mc(gs5) ciopts(lc(gs5)) offset(0.05) rename(dr_varenicline="Number of consultations")) (iv_cov_num_cons_12mth,keep(dr_varenicline) ms(T) mc(gs10) ciopts(lc(gs10)) offset(-0.05)  rename(dr_varenicline = "Number of consultations")) ///
 		 (reg_cov_age,keep(dr_varenicline) ms(S) mc(gs5) ciopts(lc(gs5)) offset(0.05) rename(dr_varenicline="Age")) (iv_cov_age,keep(dr_varenicline) ms(T) mc(gs10) ciopts(lc(gs10)) offset(-0.05)  rename(dr_varenicline = "Age")) /// 
-		  , legend(off) xline(0) byopts(yrescale)  xtitle("Mean differences in outcome") graphregion(color(white))
+		  , legend(off) xline(0) byopts(yrescale)  xtitle("Scaled bias components") graphregion(color(white))
 
 coefplot (reg_cov_autism_12 ,keep(dr_varenicline) ms(S) mc(gs5) ciopts(lc(gs5)) offset(0.05) rename(dr_varenicline="Autism")) (iv_cov_autism_12,keep(dr_varenicline) ms(T) mc(gs10) ciopts(lc(gs10)) offset(-0.05)  rename(dr_varenicline = "Autism")) ///
 		 (reg_cov_bipolar_12,keep(dr_varenicline) ms(S) mc(gs5) ciopts(lc(gs5)) offset(0.05) rename(dr_varenicline="Bipolar")) (iv_cov_bipolar_12,keep(dr_varenicline) ms(T) mc(gs10) ciopts(lc(gs10)) offset(-0.05)  rename(dr_varenicline = "Bipolar")) /// 
@@ -73,7 +73,7 @@ coefplot (reg_cov_autism_12 ,keep(dr_varenicline) ms(S) mc(gs5) ciopts(lc(gs5)) 
 		 (reg_cov_fractures_12,keep(dr_varenicline) ms(S) mc(gs5) ciopts(lc(gs5)) offset(0.05) rename(dr_varenicline="Fracture")) (iv_cov_fractures_12,keep(dr_varenicline) ms(T) mc(gs10) ciopts(lc(gs10)) offset(-0.05)  rename(dr_varenicline = "Fracture")) /// 
 		 (reg_cov_TP_ALL_PSYC_ILL_12,keep(dr_varenicline) ms(S) mc(gs5) ciopts(lc(gs5)) offset(0.05) rename(dr_varenicline="Any psychiatric illness")) (iv_cov_TP_ALL_PSYC_ILL_12,keep(dr_varenicline) ms(T) mc(gs10) ciopts(lc(gs10)) offset(-0.05)  rename(dr_varenicline = "Any psychiatric illness")) /// 
 		 (reg_cov_TEMP_CHARLSON_12,keep(dr_varenicline) ms(S) mc(gs5) ciopts(lc(gs5)) offset(0.05) rename(dr_varenicline="Chronic disease")) (iv_cov_TEMP_CHARLSON_12,keep(dr_varenicline) ms(T) mc(gs10) ciopts(lc(gs10)) offset(-0.05)  rename(dr_varenicline = "Chronic disease")) /// 
-		 ,legend(off) xline(0) byopts(yrescale)  xtitle("Absolute risk differences in outcome") graphregion(color(white))
+		 ,legend(off) xline(0) byopts(yrescale)  xtitle("Scaled bias components") graphregion(color(white))
 
 
 
@@ -83,7 +83,7 @@ coefplot (reg_cov_antidepressants_12 ,keep(dr_varenicline) ms(S) mc(gs5) ciopts(
 		 (reg_cov_dementiameds_12 ,keep(dr_varenicline) ms(S) mc(gs5) ciopts(lc(gs5)) offset(0.05) rename(dr_varenicline="Dementia medication")) (iv_cov_dementiameds_12,keep(dr_varenicline) ms(T) mc(gs10) ciopts(lc(gs10)) offset(-0.05)  rename(dr_varenicline = "Dementia medication")) ///
 		 (reg_cov_hypnotics_12 ,keep(dr_varenicline) ms(S) mc(gs5) ciopts(lc(gs5)) offset(0.05) rename(dr_varenicline="Hypnotic anxiolytic")) (iv_cov_hypnotics_12,keep(dr_varenicline) ms(T) mc(gs10) ciopts(lc(gs10)) offset(-0.05)  rename(dr_varenicline = "Hypnotic anxiolytic")) ///
 		 (reg_cov_lithium_12 ,keep(dr_varenicline) ms(S) mc(gs5) ciopts(lc(gs5)) offset(0.05) rename(dr_varenicline="Lithium")) (iv_cov_lithium_12,keep(dr_varenicline) ms(T) mc(gs10) ciopts(lc(gs10)) offset(-0.05)  rename(dr_varenicline = "Lithium")) ///
-		 , legend(off) xline(0) byopts(yrescale)  xtitle("Absolute risk differences in outcome") graphregion(color(white))
+		 , legend(off) xline(0) byopts(yrescale)  xtitle("Scaled bias components") graphregion(color(white))
  
 
  
